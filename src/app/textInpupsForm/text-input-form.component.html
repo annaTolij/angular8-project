@@ -1,0 +1,36 @@
+<form [formGroup]="inputsForm" class="form-group" (ngSubmit)="submit()" class="container">
+    <fieldset formGroupName="inputsForm1">
+        <div class="">
+            <igx-input-group>
+                <input igxInput formControlName="input1" name="fullName" type="text" />
+            </igx-input-group>
+        </div>
+        <div class="">
+            <igx-input-group>
+                <input igxInput formControlName="input2" name="fullName" type="text" />
+            </igx-input-group>
+        </div>
+        <div class="">
+            <igx-input-group>
+                <input igxInput formControlName="input3" name="fullName" type="text" [disabled]="'true'" />
+            </igx-input-group>
+        </div>
+    </fieldset>
+    <fieldset formGroupName="inputsForm2">
+        <div class="">
+            <igx-input-group>
+                <input igxInput formControlName="input1" name="fullName" type="text" />
+            </igx-input-group>
+        </div>
+        <div class="">
+            <igx-input-group>
+                <input igxInput formControlName="input2" name="fullName" type="text" />
+            </igx-input-group>
+        </div>
+        <div class="">
+            <igx-input-group>
+                <input igxInput formControlName="input3" name="fullName" type="text" [disabled]="'true'" />
+            </igx-input-group>
+        </div>
+    </fieldset>
+</form>
