@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
+import { DATA } from '../../data/data.constants';
+
 
 export class inputs {
   inputsForm1: inputsForm1;
@@ -12,6 +14,7 @@ export class inputsForm1 {
   input3: string | number;
 }
 
+
 @Component({
   selector: 'TextInputForm',
   templateUrl: './text-input-form.component.html',
@@ -19,9 +22,9 @@ export class inputsForm1 {
 })
 
 export class TextInputFormComponent implements OnInit {
-
+  
+  public info = DATA.info;
   public inputsForm: FormGroup;
-
   private inputs: inputs;
 
   constructor(private formBuilder: FormBuilder) { }
@@ -29,13 +32,13 @@ export class TextInputFormComponent implements OnInit {
   ngOnInit() {
     this.inputsForm = this.formBuilder.group({
       inputsForm1: this.formBuilder.group({
-        input1: [ '' ],
-        input2: [ '' ],
+        input1: [ this.info.applicant_name ],
+        input2: [ this.info.applicant_position ],
         input3: [ '' ],
       }),
       inputsForm2: this.formBuilder.group({
-        input1: [ '' ],
-        input2: [ '' ],
+        input1: [ this.info.agreed ],
+        input2: [ this.info.agreed_position ],
         input3: [ '' ],
       }),
     })
