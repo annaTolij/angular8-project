@@ -24,7 +24,6 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     FormsModule,
     IgxCardModule,
     IgxGridModule,
-    IgxGridModule.forRoot(),
     IgxInputGroupModule,
     IgxTreeGridModule,
     ReactiveFormsModule,

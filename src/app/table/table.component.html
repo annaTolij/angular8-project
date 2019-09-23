@@ -1,11 +1,117 @@
-<div class="sample-wrapper">
-        <igx-grid #gridRowEditTransaction [data]="data" [primaryKey]="'ProductID'" width="100%" height="500px"
-            [rowEditable]="true">
-            <igx-column field="ProductID" header="№" editable="false" width="100px"></igx-column>
-            <igx-column field="UnitsInStock" header="UnitsInStock" [dataType]="'number'">
-                <ng-template igxCellEditor let-cell="cell">
-                    <input name="units" />
-                </ng-template>
-            </igx-column>
-        </igx-grid>
-    </div>
+<igx-grid #gridRowEditTransaction [data]="data" width="100%" height="500px" [rowEditable]="true">
+    <igx-column field="title" header="Title" >
+        <ng-template let-column>
+            {{ data.title }}
+        </ng-template>
+    </igx-column>
+    <igx-column field="area" header="Area">
+        <ng-template let-column>
+            {{ data.area }}
+        </ng-template>
+    </igx-column>
+    <igx-column field="line" header="Line">
+        <ng-template let-column>
+            {{ data.line }}
+        </ng-template>
+    </igx-column>
+    <igx-column field="pipelineClass" header="Pipeline Class">
+        <ng-template let-column>
+            {{ data.pipelineClass }}
+        </ng-template>
+    </igx-column>
+    <igx-column field="drawning_num" header="Drawning Num">
+        <ng-template let-column>
+            {{ data.drawning_num }}
+        </ng-template>
+    </igx-column>
+    <igx-column field="category" header="Category">
+        <ng-template let-column>
+            {{ data.category }}
+        </ng-template>
+    </igx-column>
+    <igx-column field="number_weld" header="number_weld">
+        <ng-template let-column>
+            {{ data.number_weld }}
+        </ng-template>
+    </igx-column>
+    <igx-column field="spool_num" header="spool_num">
+        <ng-template let-column>
+            {{ data.spool_num }}
+        </ng-template>
+    </igx-column>
+    <igx-column field="type_of_welds" header="type_of_welds">
+        <ng-template let-column>
+            {{ data.type_of_welds }}
+        </ng-template>
+    </igx-column>
+    <igx-column field="drawning_sheet" header="drawning_sheet">
+        <ng-template let-column>
+            {{ data.drawning_sheet }}
+        </ng-template>
+    </igx-column>
+    <igx-column field="rev" header="rev">
+        <ng-template let-column>
+            {{ data.rev }}
+        </ng-template>
+    </igx-column>
+    <igx-column field="date_welding" header="date_welding">
+        <ng-template let-column>
+            {{ data.date_welding }}
+        </ng-template>
+    </igx-column>
+    <igx-column field="welding_process" header="welding_process">
+        <ng-template let-column>
+            {{ data.welding_process }}
+        </ng-template>
+    </igx-column>
+    <igx-column field="material" header="material">
+        <ng-template let-column>
+            {{ data.material }}
+        </ng-template>
+    </igx-column>
+    <igx-column field="diameter" header="diameter">
+        <ng-template let-column>
+            {{ data.diameter }}
+        </ng-template>
+    </igx-column>
+    <igx-column field="thickness" header="thickness">
+        <ng-template let-column>
+            {{ data.thickness }}
+        </ng-template>
+    </igx-column>
+    <igx-column field="inch_diameter" header="inch_diameter">
+        <ng-template let-column>
+            {{ data.inch_diameter }}
+        </ng-template>
+    </igx-column>
+    <igx-column field="number_welder_root" header="number_welder_root">
+        <ng-template let-column>
+            {{ data.number_welder_root }}
+        </ng-template>
+    </igx-column>
+    <igx-column field="number_welder_filling" header="number_welder_filling">
+        <ng-template let-column>
+            {{ data.number_welder_filling }}
+        </ng-template>
+    </igx-column>
+    <igx-column field="number_welder_final_bead" header="number_welder_final_bead">
+        <ng-template let-column>
+            {{ data.number_welder_final_bead }}
+        </ng-template>
+    </igx-column>
+    <igx-column field="type_control_id" header="type_control_id">
+        <ng-template let-column>
+            {{ data.type_control_id }}
+        </ng-template>
+    </igx-column>
+    <igx-column field="type_control" header="tittype_controlle">
+        <ng-template let-column>
+            {{ data.type_control }}
+        </ng-template>
+    </igx-column>
+    <igx-column field="type_control_en" header="type_control_en">
+        <ng-template let-column>
+            {{ data.type_control_en }}
+        </ng-template>
+    </igx-column>
+</igx-grid>
