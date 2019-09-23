@@ -1,47 +1,47 @@
-<form [formGroup]="inputsForm" class="form-group" (ngSubmit)="submit()" class="container">
-    <div formGroupName="inputsForm1" class="container1">
+<form [formGroup]="inputsForm" class="form-group">
+    <div formGroupName="inputsForm1" class="container">
         <div class="text">
             <span>Applicant</span>
         </div>
-        <div class="item-1">
+        <div class="item-name">
             <igx-input-group>
                 <label igxLabel for="applicant_name">applicant_name</label>
-                <input igxInput formControlName="input1" name="applicant_name" type="text" />
+                <input igxInput formControlName="input_name" name="applicant_name" type="text" />
             </igx-input-group>
         </div>
-        <div class="item-2">
+        <div class="item-position">
             <igx-input-group>
                 <label igxLabel for="applicant_position">applicant_position</label>
-                <input igxInput formControlName="input2" name="applicant_position" type="text" />
+                <input igxInput formControlName="input_position" name="applicant_position" type="text" />
             </igx-input-group>
         </div>
-        <div class="item-3">
+        <div class="item-disabled">
             <igx-input-group>
                 <label igxLabel for="ntd"></label>
-                <input igxInput formControlName="input3" name="fullName" type="text" [disabled]="'true'" />
+                <input igxInput formControlName="input_disabled" name="fullName" type="text" [disabled]="'true'" />
             </igx-input-group>
         </div>
     </div>
-    <div formGroupName="inputsForm2" class="container2">
+    <div formGroupName="inputsForm2" class="container">
         <div class="text">
             <span>Agreed</span>
         </div>
-        <div class="item-1">
+        <div class="item-name">
             <igx-input-group>
                 <label igxLabel for="agreed">agreed</label>
-                <input igxInput formControlName="input1" name="agreed" type="text" />
+                <input igxInput formControlName="input_name" name="agreed" type="text" />
             </igx-input-group>
         </div>
-        <div class="item-2">
+        <div class="item-position">
             <igx-input-group>
                 <label igxLabel for="agreed_position">agreed_position</label>
-                <input igxInput formControlName="input2" name="agreed_position" type="text" />
+                <input igxInput formControlName="input_position" name="agreed_position" type="text" />
             </igx-input-group>
         </div>
-        <div class="item-3">
+        <div class="item-disabled">
             <igx-input-group>
                 <label igxLabel for="ntd"></label>
-                <input igxInput formControlName="input3" name="fullName" type="text" [disabled]="'true'" />
+                <input igxInput formControlName="input_disabled" name="fullName" type="text" [disabled]="'true'" />
             </igx-input-group>
         </div>
     </div>

@@ -2,18 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { DATA } from '../../data/data.constants';
 
-
-export class inputs {
-  inputsForm1: inputsForm1;
-  inputsForm2: inputsForm1;
+export class Inputs {
+  inputsForm1: InputsForm1;
+  inputsForm2: InputsForm1;
 }
 
-export class inputsForm1 {
-  input1: string | number;
-  input2: string | number;
-  input3: string | number;
+export class InputsForm1 {
+  input_name: string | number;
+  input_position: string | number;
+  input_disabled: string | number;
 }
-
 
 @Component({
   selector: 'TextInputForm',
@@ -22,26 +20,29 @@ export class inputsForm1 {
 })
 
 export class TextInputFormComponent implements OnInit {
-  
+
   public info = DATA.info;
   public inputsForm: FormGroup;
-  private inputs: inputs;
+
+  public buildInputForm() {
+    this.inputsForm = this.formBuilder.group({
+      inputsForm1: this.formBuilder.group({
+        input_name: [this.info.applicant_name],
+        input_position: [this.info.applicant_position],
+        input_disabled: [''],
+      }),
+      inputsForm2: this.formBuilder.group({
+        input_name: [this.info.agreed],
+        input_position: [this.info.agreed_position],
+        input_disabled: [''],
+      }),
+    })
+  }
 
   constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit() {
-    this.inputsForm = this.formBuilder.group({
-      inputsForm1: this.formBuilder.group({
-        input1: [ this.info.applicant_name ],
-        input2: [ this.info.applicant_position ],
-        input3: [ '' ],
-      }),
-      inputsForm2: this.formBuilder.group({
-        input1: [ this.info.agreed ],
-        input2: [ this.info.agreed_position ],
-        input3: [ '' ],
-      }),
-    })
+    this.buildInputForm();
   }
 }
 

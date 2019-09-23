@@ -1,44 +1,38 @@
-<form [formGroup]="inputsForm" class="form-group" (ngSubmit)="submit()" class="container">
-    <div formGroupName="inputsForm1" class="container1">
-        <div class="item-1">
-            <igx-input-group>
-                <label igxLabel for="Num">Num</label>
-                <input igxInput formControlName="input1" name="Num" type="text | number" />
-            </igx-input-group>
-        </div>
-        <div class="item-2">
-            <igx-input-group>
-                <label igxLabel for="date_issue">Date issue</label>
-                <input igxInput formControlName="input2" name="date_issue" type="text | number" />
-            </igx-input-group>
-        </div>
-        <div class="item-3">
-            <igx-input-group>
-                <label igxLabel for="ntd">Ntd</label>
-                <input igxInput formControlName="input3" name="ntd" type="text | number" />
-            </igx-input-group>
-        </div>
+<form [formGroup]="inputsForm" class="form-group">
+    <div class="item_num">
+        <igx-input-group>
+            <label igxLabel for="num">Num</label>
+            <input igxInput formControlName="input_num" name="num" type="text | number" />
+        </igx-input-group>
     </div>
-    <div formGroupName="inputsForm2" class="container2">
-        <div class="item-4">
-            <igx-input-group>
-                <label igxLabel for="object_name">Name</label>
-                <input igxInput formControlName="input4" name="object_name" type="text" />
-            </igx-input-group>
-        </div>
+    <div class="item_date_issue">
+        <igx-input-group>
+            <label igxLabel for="date_issue">Date issue</label>
+            <input igxInput formControlName="input_date_issue" name="date_issue" type="text | number" />
+        </igx-input-group>
     </div>
-    <div formGroupName="inputsForm3" class="container3">
-        <div class="item-5">
-            <igx-input-group>
-                <label igxLabel for="org_name">Org name</label>
-                <input igxInput formControlName="input5" name="org_name" type="text" />
-            </igx-input-group>
-        </div>
-        <div class="item-6">
-            <igx-input-group>
-                <label igxLabel for="laboratory_name">Laboratory name</label>
-                <input igxInput formControlName="input6" name="laboratory_name" type="text" />
-            </igx-input-group>
-        </div>
+    <div class="item_ntd">
+        <igx-input-group>
+            <label igxLabel for="ntd">Ntd</label>
+            <input igxInput formControlName="input_ntd" name="ntd" type="text | number" />
+        </igx-input-group>
+    </div>
+    <div class="item_object_name">
+        <igx-input-group>
+            <label igxLabel for="object_name">Name</label>
+            <input igxInput formControlName="input_object_name" name="object_name" type="text" />
+        </igx-input-group>
+    </div>
+    <div class="item_org_name">
+        <igx-input-group>
+            <label igxLabel for="org_name">Org name</label>
+            <input igxInput formControlName="input_org_name" name="org_name" type="text" />
+        </igx-input-group>
+    </div>
+    <div class="item_laboratory_name">
+        <igx-input-group>
+            <label igxLabel for="laboratory_name">Laboratory name</label>
+            <input igxInput formControlName="input_laboratory_name" name="laboratory_name" type="text" />
+        </igx-input-group>
     </div>
 </form>

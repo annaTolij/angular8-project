@@ -44,3 +44,7 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+tsconfig.json
+.editorconfig
+tslint.json
+package.json
