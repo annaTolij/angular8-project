@@ -1,0 +1,48 @@
+<form [formGroup]="inputsForm" class="form-group">
+    <div formGroupName="inputsForm1" class="container">
+        <div class="text">
+            <span>Applicant</span>
+        </div>
+        <div class="item-name">
+            <igx-input-group>
+                <label igxLabel for="applicant_name">applicant_name</label>
+                <input igxInput formControlName="input_name" name="applicant_name" type="text" />
+            </igx-input-group>
+        </div>
+        <div class="item-position">
+            <igx-input-group>
+                <label igxLabel for="applicant_position">applicant_position</label>
+                <input igxInput formControlName="input_position" name="applicant_position" type="text" />
+            </igx-input-group>
+        </div>
+        <div class="item-disabled">
+            <igx-input-group>
+                <label igxLabel for="ntd"></label>
+                <input igxInput formControlName="input_disabled" name="fullName" type="text" [disabled]="'true'" />
+            </igx-input-group>
+        </div>
+    </div>
+    <div formGroupName="inputsForm2" class="container">
+        <div class="text">
+            <span>Agreed</span>
+        </div>
+        <div class="item-name">
+            <igx-input-group>
+                <label igxLabel for="agreed">agreed</label>
+                <input igxInput formControlName="input_name" name="agreed" type="text" />
+            </igx-input-group>
+        </div>
+        <div class="item-position">
+            <igx-input-group>
+                <label igxLabel for="agreed_position">agreed_position</label>
+                <input igxInput formControlName="input_position" name="agreed_position" type="text" />
+            </igx-input-group>
+        </div>
+        <div class="item-disabled">
+            <igx-input-group>
+                <label igxLabel for="ntd"></label>
+                <input igxInput formControlName="input_disabled" name="fullName" type="text" [disabled]="'true'" />
+            </igx-input-group>
+        </div>
+    </div>
+</form>
